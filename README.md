@@ -16,7 +16,8 @@ O servidor é construído em Node.js, permitindo um ambiente de execução efici
 - Prisma ORM:
 O Prisma é usado como um Object-Relational Mapping (ORM) para simplificar a interação com o banco de dados Postgres. Isso reduz a complexidade das consultas SQL e torna a manipulação de dados mais intuitiva.
 
-
+# Imagens no dockerhub
+As imagens foram disponibilizadas no seguinte repositório: https://hub.docker.com/repository/docker/bialimac/ponderada2/general
 # Como utilizar a aplicação
 
 - Em um terminal rode o seguinte comando
@@ -26,10 +27,31 @@ O Prisma é usado como um Object-Relational Mapping (ORM) para simplificar a int
 - O frontend estará na porta 3000
 - O backend estará na porta 3333
 - O banco de dados estará no 5432
+
 # Imagens da aplicação:
 
 <img width="600" alt="Screenshot_1" src="https://github.com/Bianca-Cassemiro/ponderada2/assets/99203402/203425fe-d93b-4af6-9fbc-fd68efc2e935">
 <img width="600" alt="Screenshot_2" src="https://github.com/Bianca-Cassemiro/ponderada2/assets/99203402/1bb3f395-908e-497c-9a2f-0c06a63233d5">
 <img width="600" src="https://github.com/Bianca-Cassemiro/ponderada2/assets/99203402/f228d849-24b5-4bd3-a167-c59cd62b2408")>
 
+# Estrutura de pastas
+
+```Project
+├── Backend
+│   ├── Dockerfile
+│   ├── .gitignore
+│   ├── package.json
+│   ├── Prisma
+│   │   └── migrations
+│   └── src
+│       ├── server.js
+│       └── todos.routes.js
+└── Frontend
+    ├── src
+    │   ├── pages
+    │   ├── styles
+    │   └── components
+    ├── Dockerfile
+    └── .gitignore
+```
 
