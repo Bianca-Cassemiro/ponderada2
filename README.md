@@ -18,21 +18,35 @@ O Prisma é usado como um Object-Relational Mapping (ORM) para simplificar a int
 
 # Imagens no dockerhub
 As imagens foram disponibilizadas no seguinte repositório: https://hub.docker.com/repository/docker/bialimac/ponderada2/general
-# Como utilizar a aplicação
 
-- Em um terminal rode o seguinte comando
+# Como utilizar a aplicação
+- Clone o repositório
+- Em um terminal rode o seguinte comando:
  ```bash
  docker compose up --build
+```
+- Em um outro terminal, execute o seguinte comando:
+```bash
+ npx prisma migrate dev
 ```
 - O frontend estará na porta 3000
 - O backend estará na porta 3333
 - O banco de dados estará no 5432
+
+- Em um outro terminal, execute o seguinte comando caso queira ver o banco de dados:
+```bash
+ npx prisma studio
+```
 
 # Imagens da aplicação:
 
 <img width="600" alt="Screenshot_1" src="https://github.com/Bianca-Cassemiro/ponderada2/assets/99203402/203425fe-d93b-4af6-9fbc-fd68efc2e935">
 <img width="600" alt="Screenshot_2" src="https://github.com/Bianca-Cassemiro/ponderada2/assets/99203402/1bb3f395-908e-497c-9a2f-0c06a63233d5">
 <img width="600" src="https://github.com/Bianca-Cassemiro/ponderada2/assets/99203402/f228d849-24b5-4bd3-a167-c59cd62b2408")>
+
+# Teste utilizando JWT - private route
+
+![Imagem do WhatsApp de 2023-08-29 à(s) 21 02 34](https://github.com/Bianca-Cassemiro/ponderada2/assets/99203402/20311d64-27b3-4591-a02b-e9ecc0273901)
 
 # Estrutura de pastas
 
