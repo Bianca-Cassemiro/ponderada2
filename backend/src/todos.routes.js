@@ -7,7 +7,7 @@ const { response } = require("express");
 const prisma = new PrismaClient({
   datasources: {
     db: {
-      url: "postgresql://admin:admin@db-todo:5432/todo", 
+      url: "postgresql://admin:admin@127.0.0.1:5432/todo", 
     },
   },
 });

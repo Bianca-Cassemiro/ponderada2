@@ -1,16 +1,16 @@
-version: '3.9'
-
+version: '3.8'
 services:
-  db-todo:
-    image: postgres
-    container_name: db-todo
+  postgres:
+    image: postgres:10.3
     restart: always
-    ports:
-      - '5432:5432'
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
-      - POSTGRES_DB=todo
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
 
   backend:
     build:
@@ -20,7 +20,7 @@ services:
     ports:
       - '3333:3333'
     depends_on:
-      - db-todo
+      - postgres
     volumes:
       - ./backend:/usr/src/app
 
@@ -31,5 +31,7 @@ services:
     container_name: frontend
     ports:
       - '3000:3000'
-    depends_on: 
+    depends_on:
       - backend
+volumes:
+  postgres:
